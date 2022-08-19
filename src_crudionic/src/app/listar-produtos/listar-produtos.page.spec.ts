@@ -1,0 +1,27 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { ListarProdutosPage } from './listar-produtos.page';
+
+describe('ListarProdutosPage', () => {
+  let component: ListarProdutosPage;
+  let fixture: ComponentFixture<ListarProdutosPage>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ ListarProdutosPage ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ListarProdutosPage);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

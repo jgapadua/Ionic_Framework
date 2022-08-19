@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sem Bebida</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div text-center>
+    <h1>Número de Pessoas:</h1>
+  </div>
+
+  <div>
+    <ion-item>  
+      <ion-label position="left">Pessoas: </ion-label>
+      <ion-input type="number" value="0" [(ngModel)]="pessoas"></ion-input>  
+    </ion-item>
+  </div>
+ 
+    <div>
+       <ion-item>  
+          <ion-label position="left">Valor da conta: </ion-label>
+          <ion-label position="left">R$</ion-label>
+          <ion-input type="number" value="0" [(ngModel)]="valor"></ion-input>        
+        </ion-item>
+      </div>
+      
+        <div>
+          <ion-item>    
+              <ion-label position="left">Extras:</ion-label>
+              <ion-label position="left">R$</ion-label>
+              <ion-input type="number" value="0" [(ngModel)]="extras"></ion-input>        
+            </ion-item>
+          </div>
+          
+            <div>
+              <ion-item>     
+                  <ion-label position="left">Incluir Serviços:</ion-label>
+                  <ion-input type="number" value="0" [(ngModel)]="servicos"></ion-input>   
+                  <ion-label position="right">%</ion-label>       
+                </ion-item>    
+              </div>    
+            <div>
+                <ion-item> 
+                <ion-button color="secondary" expand="block" (click)="abrirPagina2()">DIVIDIR CONTA!</ion-button>
+                </ion-item>  
+            </div>
+
+
+</ion-content>

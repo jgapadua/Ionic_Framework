@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Meus contatos</ion-title>
+      <!--Botao voltar-->
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding color="dark" >
+    <h2 text-center>Lista de Contatos</h2>
+    <!--criar a lista dos contatos-->
+  <ion-list lines="no-line">
+    <!--chamar a lista na interface-->
+    <ion-card>
+    <ion-item *ngFor="let contato of Contatos">
+    <ion-card-content>
+        <ion-label>{{contato.nome}}</ion-label>
+        <ion-label>{{contato.telefone}}</ion-label>
+       <ion-icon name="call" color="secondary"></ion-icon>
+       <ion-icon name="close" color="danger" fill="outline" (click)="remover(contato)"></ion-icon>
+       <ion-icon name="create"  fill="outline" (click)="editar(contato)"></ion-icon>
+      </ion-card-content>
+    </ion-item>
+  </ion-card>
+  </ion-list>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button size="small">
+    <ion-icon name="add" (click)="cadastrar()"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-content>
+  

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary" text-center>
+    <ion-title>
+       Listar Vendas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list lines="nolines">
+  <ion-item-sliding *ngFor="let item of Produtos">
+<ion-card>
+    <ion-item>
+      <ion-card-content>
+        <ion-label>Vendas: {{item.codigo}}</ion-label>
+        <ion-label>Data: {{item.data}}</ion-label:>
+        <ion-label>Hora: {{item.hora}}</ion-label:>
+        <ion-label>Hora: {{item.hora}}</ion-label:>
+        <ion-label>Total: {{item.total}}</ion-label:>
+        <ion-label>Codigo Cliente: {{item.cliente_codigo}}</ion-label:>
+       <ion-label>Codigo Produto: {{item.produto_codigo}}</ion-label:>
+        <ion-button (click)="editar(item)" size="small" fill="outline">
+          <ion-icon name="create" slot="icon-only"></ion-icon>
+        </ion-button>
+        <ion-button (click)="deletar(item)" size="small" fill="outline">
+          <ion-icon name="trash" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+    </ion-item>
+  </ion-card>
+  </ion-item-sliding>
+</ion-list>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button size="small">
+    <ion-icon name="add" (click)="cadastrar()"></ion-icon></ion-fab-button>
+</ion-fab>
+</ion-content>

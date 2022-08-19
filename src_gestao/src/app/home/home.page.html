@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-title >
+       Meu Estoque
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Saldo atual</ion-card-subtitle>
+      <ion-card-title color="primary">R$ {{saldoAtual}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item>
+      <ion-label>Total das entradas</ion-label>
+      <ion-button fill="outline" slot="end" color="success">R$ {{totalEntradas}}</ion-button>
+    </ion-item>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item>
+      <ion-label>Total das saídas</ion-label>
+      <ion-button fill="outline" slot="end" color="danger">R$ {{totalSaidas}}</ion-button>
+    </ion-item>
+  </ion-card>
+  
+  <ion-list>
+    <!-- Foreach no array -->
+    <ion-item *ngFor="let value of arrayVendas" >
+        <ion-label>{{value.codigo}}</ion-label>
+      <ion-label>{{value.nome}}</ion-label>
+      <ion-label>{{value.valor}}</ion-label>
+      <ion-label>{{value.tipo}}</ion-label>
+      <ion-label>{{value.descricao}}</ion-label>
+    </ion-item>
+  </ion-list>
+  {{msg}}
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add" (click)="cadastrar()"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+  
+  </ion-content>
+  

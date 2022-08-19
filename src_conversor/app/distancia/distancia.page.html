@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>CONVERSOR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+  <h1><strong>CONVERSÃO DE DISTANCIA</strong></h1>
+  </ion-item>
+  <ion-item>
+  <div>
+    <ion-label>Valor em Km</ion-label>
+    <ion-input type="text" [(ngModel)]="valorkm" placeholder="Digite a distancia"></ion-input>
+  </div>
+  </ion-item>
+  <div>
+    <ion-button color="secondary" expand="block"
+  (click)="converter()">Converter para metro</ion-button>
+  </div>
+  <h3>Total: {{total}}</h3>
+  <div>
+      <ion-button color="danger" expand="block" (click)="voltar()">VOLTAR</ion-button>
+  </div>  
+</ion-content>

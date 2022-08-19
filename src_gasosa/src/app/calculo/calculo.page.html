@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary" >
+    <ion-title text-center>
+     <strong>Gasoleta</strong>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-label color="primary">
+          Preço do litro (R$00.00):
+        </ion-label>
+        </ion-card>
+
+        <ion-item>
+            <ion-label position="stacked">Etanol:</ion-label>
+            <ion-input  placeholder="Digite o preço do litro"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label position="stacked">Gasolina:</ion-label>
+              <ion-input placeholder="Digite o preço do litro"></ion-input>
+            </ion-item>
+
+            <ion-card>
+                <ion-label color="primary">
+                  Consumo médio de Km/Litro(00.0):
+                </ion-label>
+      
+                </ion-card>
+
+                <ion-item>
+                    <ion-label position="stacked">Km/Litro Etanol:</ion-label>
+                    <ion-input  placeholder="Digite o consumo Km/Litro"></ion-input>
+                  </ion-item>
+        
+                  <ion-item>
+                      <ion-label position="stacked">Km/Litro Gasolina:</ion-label>
+                      <ion-input placeholder="Digite o consumo Km/Litro"></ion-input>
+                    </ion-item>
+
+                   <div>
+                        <ion-button color="primary" size="large" expand="full" (click)="calculo($event)" >Calcular</ion-button>
+                  </div>
+                  <div>
+                        <ion-button color="danger" expand="block" (click)="voltar()">Voltar</ion-button>
+                  </div>
+                       
+                  
+        
+</ion-content>

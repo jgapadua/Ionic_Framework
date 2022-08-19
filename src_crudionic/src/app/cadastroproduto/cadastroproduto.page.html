@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cadastro Produto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-item>
+  <ion-label position="floating">Nome</ion-label>
+  <ion-input type="text" [(ngModel)]="nome"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Quantidade</ion-label>
+  <ion-input type="number" [(ngModel)]="qtde"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Preço</ion-label>
+  <ion-input type="double" [(ngModel)]="preco"></ion-input>
+</ion-item>
+<ion-button color="secondary" (click)="salvar()">Salvar</ion-button>
+</ion-content>

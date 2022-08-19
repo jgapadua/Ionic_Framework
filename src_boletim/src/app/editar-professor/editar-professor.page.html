@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar Professor</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+  <ion-input type="text"[(ngModel)]="nome"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label position="floating">Login</ion-label>
+    <ion-input type="text"[(ngModel)]="login"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Senha</ion-label>
+      <ion-input type="password"[(ngModel)]="senha"></ion-input>
+      </ion-item>
+        <ion-button color="secondary" (click)="salvar()">Salvar</ion-button>
+
+</ion-content>

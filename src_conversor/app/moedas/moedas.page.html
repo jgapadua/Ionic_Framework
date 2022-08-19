@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>CONVERSOR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+  <h1><strong>CONVERSÃO DE MOEDAS</strong></h1>
+  </ion-item>
+  <ion-item>
+  <div>
+    <ion-label>Valor em real</ion-label>
+    <ion-input type="text" [(ngModel)]="valorreal" placeholder="Digite o valor"></ion-input>
+  </div>
+  </ion-item>
+  <div>
+    <ion-button color="secondary" expand="block"
+  (click)="calculo('dolar')">Converter por dolar americano</ion-button>
+  </div>
+  <div>
+  <ion-button color="secondary" expand="block"
+  (click)="calculo('euro')">Converter por euro</ion-button>
+  </div>
+  <div>
+  <ion-button color="secondary" expand="block"
+  (click)="calculo('iene')">Converter por iene</ion-button>
+</div>
+  <h3>Total: {{total}}</h3>
+  <div>
+      <ion-button color="danger" expand="block" (click)="voltar()">VOLTAR</ion-button>
+  </div>  
+</ion-content>
